@@ -22,8 +22,4 @@ export class Comp1Component implements OnInit, AfterViewInit {
       this.value = `The value got from component 2 is "${value}"`;
     }
   }
-  setMessage(event: any) {
-
-    this.msg = `The value got from component 1 is ${event.target.value}`;
-  }
 }

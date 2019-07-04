@@ -1,6 +1,6 @@
 <p>Component 2 </p>
 
-<p> {{ msg}}</p>
+<p *ngIf="msg.length">The value got from component 1 is {{msg}}</p>
 
 <input #somesh type="text">
 <input type="submit" value="Submit" (click)="onSubmit(somesh)" #sbt>
