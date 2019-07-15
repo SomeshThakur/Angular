@@ -1,0 +1,5 @@
+<h3>Persons</h3>
+<p>{{msg}}</p>
+
+<button value="Completed" (click)="onClick()">Completed</button>
+<app-comp6 *ngFor="let person of persons" [person]="person" [id]="personsService.personsSelected"></app-comp6>
