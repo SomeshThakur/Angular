@@ -6,28 +6,18 @@ import { PersonsService } from 'src/app/services/persons.service';
   templateUrl: './comp6.component.html',
   styleUrls: ['./comp6.component.scss']
 })
-export class Comp6Component implements OnInit, OnChanges {
+export class Comp6Component implements OnInit {
   @Input() person: any;
   @Input() id: number;
-  selected = false;
-  class: string;
+  elementClass: string;
   msg: string;
-  constructor(private personsService: PersonsService) { }
-
-  ngOnChanges() {
-    if (this.id === this.person.id) {
-      this.class = "selectedCard";
-    }
-    else {
-      this.class = "notselectedCard";
-    }
+  constructor(private personsService: PersonsService) {
+    this.personsService.personSelected.subscribe((id) => {
+      this.elementClass = this.person.id === id ? "list-group-item list-group-item-action active" : "list-group-item list-group-item-action";
+    })
   }
-  ngOnInit() {
-
-  }
+  ngOnInit() { }
   onClick() {
-    this.selected = true;
-    this.personsService.personsSelected = this.person.id;
+    this.personsService.personSelected.next(this.person.id);
   }
-
 }

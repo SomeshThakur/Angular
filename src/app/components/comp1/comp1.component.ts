@@ -6,14 +6,10 @@ import { Comp2Component } from '../comp2/comp2.component';
   templateUrl: './comp1.component.html',
   styleUrls: ['./comp1.component.scss']
 })
-export class Comp1Component implements OnInit, AfterViewInit {
+export class Comp1Component implements OnInit {
   msg = '';
   value = '';
-  @ViewChild(Comp2Component, { static: false }) c2;
   constructor() { }
-  ngAfterViewInit(): void {
-    console.log(this.c2)
-  }
 
   ngOnInit() {
   }

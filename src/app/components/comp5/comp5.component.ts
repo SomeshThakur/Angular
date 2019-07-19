@@ -11,7 +11,7 @@ import { log } from 'util';
 export class Comp5Component implements OnInit {
   persons: any[];
   msg: string;
-
+  personIdToRemove: number;
 
   // To demonstrate the life cycle of component enable this flag
 
@@ -22,13 +22,14 @@ export class Comp5Component implements OnInit {
     personsService.getPersons().subscribe((data: any) => {
       this.persons = data;
     });
+    this.personsService.personSelected.subscribe(id => this.personIdToRemove = id);
   }
   ngOnChanges() {
     if (this.showLifeCycle) alert("ngOnChanges");
   }
   onClick() {
     this.persons = this.persons.filter(person => {
-      return person.id !== this.personsService.personsSelected
+      return person.id !== this.personIdToRemove;
     })
   }
   ngOnInit() {
