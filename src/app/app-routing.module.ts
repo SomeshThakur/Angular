@@ -6,6 +6,7 @@ import { Comp4Component } from './components/comp4/comp4.component';
 import { Comp5Component } from './components/comp5/comp5.component';
 import { Task1Component } from './components/task1/task1.component';
 import { Task3Component } from './components/task3/task3.component';
+import { WelcomeComponent } from './components/welcome/welcome.component';
 
 const routes: Routes = [
   {
@@ -15,7 +16,12 @@ const routes: Routes = [
       { path: "com4", component: Comp4Component }]
   },
   { path: "task2", component: Comp5Component },
-  { path: "task3", component: Task3Component }
+  {
+    path: "task3", component: Task3Component, children: [
+      { path: "cricket", loadChildren: () => import('./cricket/cricket.module').then(mod => mod.CricketModule) }
+    ]
+  },
+  { path: "", component: WelcomeComponent }
 ];
 
 @NgModule({

@@ -15,6 +15,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { NavigationBarComponent } from './components/navigation-bar/navigation-bar.component';
 import { Task1Component } from './components/task1/task1.component';
 import { Task3Component } from './components/task3/task3.component';
+import { WelcomeComponent } from './components/welcome/welcome.component';
+import { CricketModule } from './cricket/cricket.module';
 
 @NgModule({
   declarations: [
@@ -30,10 +32,11 @@ import { Task3Component } from './components/task3/task3.component';
     NavigationBarComponent,
     Task1Component,
     Task3Component,
+    WelcomeComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule, FormsModule, HttpClientModule
+    AppRoutingModule, FormsModule, HttpClientModule, CricketModule
   ],
   providers: [],
   bootstrap: [AppComponent]
