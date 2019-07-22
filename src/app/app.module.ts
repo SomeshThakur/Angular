@@ -12,6 +12,9 @@ import { RightComponent } from './components/right/right.component';
 import { Comp5Component } from './components/comp5/comp5.component';
 import { Comp6Component } from './components/comp6/comp6.component';
 import { HttpClientModule } from '@angular/common/http';
+import { NavigationBarComponent } from './components/navigation-bar/navigation-bar.component';
+import { Task1Component } from './components/task1/task1.component';
+import { Task3Component } from './components/task3/task3.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +27,9 @@ import { HttpClientModule } from '@angular/common/http';
     Comp6Component,
     LeftComponent,
     RightComponent,
+    NavigationBarComponent,
+    Task1Component,
+    Task3Component,
   ],
   imports: [
     BrowserModule,

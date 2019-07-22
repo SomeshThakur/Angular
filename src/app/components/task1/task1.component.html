@@ -1,0 +1,26 @@
+<div class="container">
+    <h5>Create a Angular App which has the following functionality</h5>
+    <ol>
+        <li>Create 4 Components say C1, C2, C3 & C4</li>
+        <li>Component 2 -> specifications</li>
+        <ul>
+            <li>Should have a input which can take a value</li>
+            <li>Should have a button to emit the input value entered</li>
+            <li>Input value should be fetched with both approaches of @Viewchild and 2 way data binding</li>
+            <li>On button click, add a function to emit the value</li>
+            <li>Should have @Input variable defined to accept the value</li>
+            <li>Should have @Output variable to emit an event</li>
+            <li>Should have a label to display the value received from Component 1</li>
+        </ul>
+        <li>Component C1 should host the component C2</li>
+        <li> Some data should be passed from component 1 to Component 2 </li>
+        <li> Component 1 should display the value emitted from Component 2</li>
+        <li> Display the value received from Component 2 on Component 1 using String Interpolation</li>
+        <li> Establish Routing between the Components 1, 3 & 4 – Where the Routing links to be placed in a Left pane and
+            the Components to be displayed on the Right Side of the Left Pane.</li>
+    </ol>
+    <div class="task">
+        <app-left></app-left>
+        <app-right></app-right>
+    </div>
+</div>

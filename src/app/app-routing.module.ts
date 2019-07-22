@@ -4,12 +4,18 @@ import { Comp1Component } from './components/comp1/comp1.component';
 import { Comp3Component } from './components/comp3/comp3.component';
 import { Comp4Component } from './components/comp4/comp4.component';
 import { Comp5Component } from './components/comp5/comp5.component';
+import { Task1Component } from './components/task1/task1.component';
+import { Task3Component } from './components/task3/task3.component';
 
 const routes: Routes = [
-  { path: "com1", component: Comp1Component },
-  { path: "com3", component: Comp3Component },
-  { path: "com4", component: Comp4Component },
-  { path: "task2", component: Comp5Component }
+  {
+    path: "task1", component: Task1Component, children: [
+      { path: "com1", component: Comp1Component },
+      { path: "com3", component: Comp3Component },
+      { path: "com4", component: Comp4Component }]
+  },
+  { path: "task2", component: Comp5Component },
+  { path: "task3", component: Task3Component }
 ];
 
 @NgModule({

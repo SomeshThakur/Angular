@@ -1,7 +1,27 @@
-<h3>Persons</h3>
-<p>{{msg}}</p>
+<div class="container">
 
-<button class="btn btn-primary" value="Completed" (click)="onClick()">Completed</button>
-<div class="list-group">
-    <app-comp6 *ngFor="let person of persons" [person]="person" [id]="personsService.personsSelected"></app-comp6>
+    <h5>Create a Angular App which has the following functionality </h5>
+    <ol>
+        <li> A Service which fetches some mock data says a collections of Persons through HTTPClient Module</li>
+        <li> A Component C1, should refer to the Service and render all the Persons Details whose request status is
+            “open”</li>
+        <li> For Displaying Person Details a new component C2 should be created which expects a @input from parent
+        </li>
+        <li> C1 will render the persons objects using ngFor on C2</li>
+        <li> A person on C1 should be selectable and once selected it should be highlighted.</li>
+        <li> C1 will hoist a button to mark the status of selected person to “Completed”</li>
+        <li> Once status is marked completed, the collection should be updated hence view gets updated</li>
+        <li> Try demonstrating the components lifecycle methods through C2</li>
+        <li> Demonstrate the Cross Component communication using Subject ( next and subscribe)</li>
+
+    </ol>
+
+
+    <h3>Persons</h3>
+    <p>{{msg}}</p>
+
+    <button class="btn btn-primary" value="Completed" (click)="onClick()">Completed</button>
+    <div class="list-group">
+        <app-comp6 *ngFor="let person of persons" [person]="person" [id]="personsService.personsSelected"></app-comp6>
+    </div>
 </div>
