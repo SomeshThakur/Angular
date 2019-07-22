@@ -9,7 +9,7 @@ import { PersonsService } from 'src/app/services/persons.service';
 export class Comp6Component implements OnInit {
   @Input() person: any;
   @Input() id: number;
-  elementClass: string;
+  elementClass = "list-group-item list-group-item-action";
   msg: string;
   constructor(private personsService: PersonsService) {
     this.personsService.personSelected.subscribe((id) => {
